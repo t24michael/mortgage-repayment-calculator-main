@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+@font-face {
+    font-family: "PlusJakarta";
+    src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") 
+        format("truetype");
+}
+:root{
+    --lime: hsl(61, 70%, 52%);
+    --slate100: hsl(202, 86%, 94%);
+    --slate300: hsl(203, 41%, 72%);
+    --slate500: hsl(200, 26%, 54%);
+    --slate700: hsl(200, 24%, 40%);
+    --slate900: hsl(202, 55%, 16%);
+}
+
+body{
+    background-color: var(--slate100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    margin-top: 2rem;
+    background-color: white;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.inline{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.iconContainer{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    /* background-color: brown; */
+}
+.iconContainerRight{
+    flex-direction: row-reverse;
+}
+.iconContainer .amountIcon{
+    position: absolute;
+    padding: 20px;
+    min-width: 40px;
+}
+.amountIcon{
+    font-style: normal;
+    font-family: 'PlusJakarta';
+    color: var(--slate900);
+    background-color: var(--slate300);
+    font-weight: 600;
+}
+.termRate{
+    display: flex;
+    margin-top: 2rem;
+    /* background-color: aquamarine; */
+    
+}
+.calculator{
+    display: flex;
+    background-color:white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.rate{
+    margin-left: 1rem;
+}
+.term{
+    margin-right: 1rem;
+}
+.mortgageType{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* background-color:blueviolet; */
+}
+.radioSection{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 2px solid var(--slate700);
+    border-radius: 0.5rem;
+}
+.mortgageType input[type="radio"] {
+    margin: 0 0 0 1rem;
+    width: 1rem;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 1rem;
+    cursor: pointer;
+}
+.mortgageType input[type="radio"]:checked {
+    background-color: var(--lime);
+}
+.mortgageType label {
+    font-weight: 700;
+    color: hsl(202, 55%, 16%);
+}
+.results{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--slate900);
+    width: 50%;
+    border-bottom-left-radius: 3rem;
+}
+.submitButton{
+    font-family: 'PlusJakarta';
+    color: var(--slate900);
+    font-weight: 900;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--lime);
+    margin-bottom: 1rem;
+}
+.submitButton:hover{
+    background-color: hsl(61, 65%, 44%);
+}
+.title{
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+}
+.hidden{
+    display: none;
+}
+h{
+    font-family: "PlusJakarta";
+    color: var(--slate900);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+h3{
+    font-family: "PlusJakarta";
+    color: white;
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+.clear{
+    color: var(--slate300);
+    cursor: pointer;
+}
+.resultText{
+    font-family: 'PlusJakarta';
+    color: var(--slate300);
+    text-align: center;
+}
+.clear:hover{
+    color: var(--slate500);
+}
+.amountInput{
+    width: 100%;
+    padding-left: 15%;
+}
+.mortgageLabels{
+    margin-bottom: 1rem;;
+}
+
+.inputFail{
+    border: 2px solid red;
+}
+.showResults{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    background-color: hsl(203, 47%, 9%);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.monthlyRepayments{
+    font-family: 'PlusJakarta';
+    color: var(--lime);
+    font-size: 700;
+    text-align: left;
+    font-size: 3rem;
+    margin: 0rem 0 2rem 0;
+}
+.resultTextMonthly{
+    font-family: 'PlusJakarta';
+    color: var(--slate300);
+    margin-bottom: 1rem;
+}
+.lineResult{
+    width: 100%;
+    color: gray;
+    margin-bottom: 2rem;
+}
+.calculateHeader{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.totalRepayment{
+    font-family: 'PlusJakarta';
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+input{
+    color:var(--slate900);
+    border: 2px solid var(--slate700);
+    -moz-appearance: textfield;
+    border-radius: 0.5rem;
+    height: 2rem;
+    padding-left: 10px;
+}
+input:focus{
+    border: 2px solid var(--lime);
+    outline: none;
+    /* box-shadow: 0 0 10px var(--lime); */
+    
+}
+
+label{
+    font-family: 'PlusJakarta';
+    color: var(--slate700);
+    font-weight: 500;
+}
+

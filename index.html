@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="title">
+          <h>Mortgage Calculator</h>
+          <p class="clear"onclick="clearAllInputs()"><u>Clear all</u></p>
+        </div>
+        <form>
+          <div class="mortgageLabels">
+            <label for="amount">Mortgage Amount</label><br />
+          </div>
+
+          <div class="iconContainer">
+            <i class="amountIcon">€</i>
+            <input
+              class="amountInput"
+              type="number"
+              id="amount"
+              name="group2"
+              step="0.01"
+              min="0"
+            />
+          </div>
+          <div class="termRate">
+            <div class="term">
+              <div class="mortgageLabels">
+                <label for="mortgageTerm">Mortgage Term</label><br />
+              </div>
+              <div class="iconContainer iconContainerRight">
+                <i class="amountIcon">years</i>
+                <input
+                  class="inputMargin"
+                  type="number"
+                  id="mortgageTerm"
+                  name="group2"
+                  step="0.01"
+                  min="0"
+                />
+              </div>
+            </div>
+            <div class="rate">
+              <div class="mortgageLabels">
+                <label for="mortgageRate">Interest Rate</label><br />
+              </div>
+              <div class="iconContainer iconContainerRight">
+                <input
+                  class="inputMargin"
+                  type="number"
+                  id="mortgageRate"
+                  name="group2"
+                  step="0.01"
+                  min="0"
+                />
+                <i class="amountIcon">%</i>
+              </div>
+            </div>
+          </div>
+          <div class="mortgageType">
+            <label>Mortgage Type</label><br />
+            <div class="radioSection">
+              <input type="radio" id="repayButton" name="group1" />
+              <label for="repayButton">Repayment</label><br />
+            </div>
+            <div class="radioSection">
+              <input type="radio" id="interestButton" name="group1" />
+              <label for="interestButton">Interest Only</label><br />
+            </div>
+          </div>
+        </form>
+        <button class="submitButton" onclick="calculateRepayments()">
+          Calculate Repayments
+        </button>
+      </div>
+
+      <div class="results" id="firstPage">
+        <img
+          src="assets/images/illustration-empty.svg"
+          style="height: 50%; width: 50%"
+        />
+        <h3>Results shown here</h3>
+        <p class="resultText">
+          Complete the form and click "calculate repayments" to see waht your
+          monthly repayments would be.
+        </p>
+      </div>
+      <div class="results hidden" id="calculatedResults">
+        <div class="calculateHeader">
+          <h3>Your results</h3>
+          <p class="resultText" style="text-align: left">
+            Your results Your results are shown below based on the information
+            you provided. To adjust the results, edit the form and click
+            “calculate repayments” again.
+          </p>
+        </div>
+        <div class="showResults">
+          <p class="resultTextMonthly">Your monthly repayments</p>
+          <p class="monthlyRepayments" id="result">TEST</p>
+          <hr class="lineResult">
+          <p class="resultTextMonthly">Total you'll repay over the term</p>
+          <p class="totalRepayment" id="resultTotal">TEST</p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
